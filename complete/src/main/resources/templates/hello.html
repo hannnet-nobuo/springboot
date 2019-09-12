@@ -6,6 +6,8 @@
     </head>
     <body>
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <p th:text="'GreetingBean msg->, ' + ${name} + '!'" />
+        <a th:href="@{/greeting}">go greeting</a>
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
